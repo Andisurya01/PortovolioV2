@@ -8,7 +8,7 @@ import ButtomNavBar from "../components/navBar/buttomNavBar"
 import Footer from "../components/footer/footer"
 import Banner from "../components/banner/banner"
 import Galerry from "../components/gallery/gallery"
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import { AnimatePresence, useInView } from "framer-motion"
 import Lenis from '@studio-freight/lenis'
 
@@ -21,22 +21,22 @@ const MainPages = () => {
     }
 
     requestAnimationFrame(raf)
+
+
     const ref = useRef(null)
 
     const isInView = useInView(ref)
-    useEffect(() => {
-        console.log("is inviw?", isInView)
-    }, [isInView])
     return (
         <div>
-            <div className="">
-                <div
-                    ref={ref}>
+            <div className="relative"
+                ref={ref}>
+                <div>
                     <NavBar />
                 </div>
-                <Hero />
+                <Hero >
+                </Hero>
             </div>
-            <div className="overflow-hidden">
+            <div className="">
                 <About />
             </div>
             <HeaderProject />
@@ -47,7 +47,10 @@ const MainPages = () => {
                 <Project title={"Project 4 - Role : frontend developer"}></Project>
                 <Project title={"Project 5 - Role : frontend developer"}></Project>
             </div>
-            <Galerry />
+            <div
+            >
+                <Galerry />
+            </div>
             <TechStack />
             <Banner />
             <Footer />

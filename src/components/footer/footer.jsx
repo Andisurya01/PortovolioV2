@@ -5,7 +5,7 @@ const Footer = () => {
 
     const localTime = event.toLocaleTimeString('en-US', { timeZone: 'Asia/Jakarta' })
     return (
-        <section className="bg-Primary-Color">
+        <section className="bg-Primary-Color pb-24">
             <div className="">
                 <div className="text-center max-w-screen-xl mx-auto">
                     <motion.h1

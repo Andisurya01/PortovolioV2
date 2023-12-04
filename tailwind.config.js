@@ -12,7 +12,10 @@ export default {
         
         'tersier-color-orange' : "#fab085",
         'tersier-color-red-heart' : "#702948",
-        'tersier-color-red-pucet' : "#9c5e6b"
+        'tersier-color-red-pucet' : "#9c5e6b",
+
+        'eva01' : "#8bd450",
+        'eva02' : "#67478A"
       },
       fontFamily : {
         'Poppins' : ["sans-serif"]

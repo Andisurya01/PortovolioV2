@@ -7,6 +7,7 @@ const Banner = () => {
                 className="rounded-l-xl  text-white overflow-hidden relative">
                 <motion.div
                     initial={{
+                        opacity: 0,
                         height: 0,
                         width: 0,
                         y : 0
@@ -17,6 +18,7 @@ const Banner = () => {
                         ease : "easeInOut"
                     }}
                     whileInView={{
+                        opacity: 1,
                         height: 2000,
                         width: 3000
                     }}

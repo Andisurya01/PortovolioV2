@@ -11,3 +11,7 @@
 ::selection {
   background:#8bd450;
 }
+
+html {
+  scroll-behavior: auto;
+}
