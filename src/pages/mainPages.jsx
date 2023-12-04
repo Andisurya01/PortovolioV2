@@ -22,6 +22,7 @@ const MainPages = () => {
 
     requestAnimationFrame(raf)
     const ref = useRef(null)
+
     const isInView = useInView(ref)
     useEffect(() => {
         console.log("is inviw?", isInView)
@@ -35,7 +36,9 @@ const MainPages = () => {
                 </div>
                 <Hero />
             </div>
-            <About />
+            <div className="overflow-hidden">
+                <About />
+            </div>
             <HeaderProject />
             <div className="flex flex-col">
                 <Project title={"Project 1 - Role : frontend developer"}></Project>

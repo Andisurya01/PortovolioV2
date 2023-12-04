@@ -1,13 +1,17 @@
-import { motion } from "framer-motion"
+import H1Herro from "./h1Herr0"
+
 const Hero = () => {
     return (
         <section className="">
-            <div className="bg-Primary-Color grid place-content-center h-screen">
-                <motion.h1
-
-                    className="text-9xl">
-                    ANDI SURYA PRIYADI
-                </motion.h1>
+            <div className="bg-Primary-Color h-screen overflow-hidden">
+                <H1Herro initial={0}/>
+                <H1Herro initial={-250} animate={-150}/>
+                <H1Herro initial={-500} animate={-400}/>
+                <H1Herro initial={-1000} animate={-900}/>
+                <H1Herro initial={-0} animate={100}/>
+                <H1Herro initial={-250} animate={-150}/>
+                <H1Herro initial={-500} animate={-400}/>
+                <H1Herro initial={-1000} animate={-900}/>
             </div>
         </section>
     )
