@@ -2,10 +2,6 @@ import { motion } from "framer-motion"
 const Galerry = () => {
 
     const galleryContainer = {
-        init: {
-            x: 0,
-            y: 0,
-        },
         hover: {
             y: 5,
             opacity: 0.7
@@ -19,10 +15,18 @@ const Galerry = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 px-10 gap-5">
                 <motion.div
                     variants={galleryContainer}
-                    initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg bg-center bg-auto h-80 rounded-2xl col-span-2 "
-                    style={{backgroundImage : "url('gallery/matapink.png')"}}></motion.div>
+                    className="w-full drop-shadow-lg bg-center bg-auto h-80 rounded-2xl col-span-2 overflow-hidden"
+                >
+                    <motion.div
+                        initial={{
+                            y: -650
+                        }}
+                    >
+                        <img
+                            src="gallery/matapink.png" className="" />
+                    </motion.div>
+                </motion.div>
                 <motion.div
                     variants={galleryContainer}
                     initial={"init"}
