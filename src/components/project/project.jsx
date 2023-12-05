@@ -1,39 +1,37 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion"
 import { useState } from "react"
-const Project = ({ title }) => {
-    const [onHover, setOnHover] = useState(false)
-    const containerVariants = {
+const Project = ({ index, title, setModal, role }) => {
+    const [hover, setHover] = useState(false)
+    const project = {
         init: {
-            height: 2000,
-            width: 2000,
-            y: 130,
-            
-            transition : {
-                duration: 1,
-                ease : "easeInOut"
-            }
+            x: 0
         },
-        hover: {
-            y: 0,
-            transition : {
-                duration: 0.5,
-                ease : "easeInOut"
-            }
+        animateH1: {
+            x: -10,
+            opacity : 0.5
+        },
+        animateP: {
+            x: 10,
+            opacity : 0.5
         }
     }
     return (
-        <section className=" mx-auto w-full px-10 bg-Primary-Color py-2">
+        <section className=" mx-auto w-full px-10 bg-Primary-Color py-2" onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}}>
             <motion.div
-                onHoverStart={() => setOnHover(true)}
-                onHoverEnd={() => setOnHover(false)}
-                className="cursor-pointer border-b-2  border-black relative py-10 overflow-hidden group-[.motion.div]:">
-                <motion.div
-                    variants={containerVariants}
-                    initial="init"
-                    animate = {onHover ? "hover" : "init"}
-                    className="bg-black absolute inset-0 group-hover:bg-slate-400">isi</motion.div>
-                <h1 className="text-2xl"> | {title}</h1>
+                onHoverStart={() => setHover(true)}
+                onHoverEnd={() => setHover(false)}
+                className="cursor-pointer border-b-2 border-black py-10 flex justify-between">
+                <motion.h1
+                    variants={project}
+                    animate={hover ? "animateH1" : "init"}
+                    className="text-2xl"> | {title}</motion.h1>
+                <motion.h1
+                    variants={project}
+                    animate={hover ? "animateP" : "init"}
+                    className="text-2xl">
+                    {role}
+                </motion.h1>
             </motion.div>
         </section>
     )

@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom"
-
 const NavBar = () => {
     return (
         <nav className="p-10 absolute w-full">
