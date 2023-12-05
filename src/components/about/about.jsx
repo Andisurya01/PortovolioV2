@@ -17,8 +17,8 @@ const About = () => {
     }
     return (
         <section className="mx-auto">
-            <div className="text-white bg-black rounded-t-xl grid grid-cols-6 px-10 py-40">
-                <div className="col-span-2">
+            <div className="text-white bg-black  rounded-t-xl grid grid-cols-1 md:grid-cols-6 px-10 md:py-40 py-20">
+                <div className="col-span-2 pb-8 text-center md:text-start">
                     {about.map((name, index) => {
                         return (
                             <motion.span

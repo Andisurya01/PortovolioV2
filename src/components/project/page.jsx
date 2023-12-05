@@ -7,7 +7,7 @@ const project = [
     {
         title: "Project 1",
         role: "Role : frontend developer",
-        src: "gweh.jpg"
+        src: "gallery/gweh.jpg"
     },
     {
         title: "Project 2",

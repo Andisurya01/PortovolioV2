@@ -5,6 +5,7 @@
 @layer base {
   html{
     font-family: "Poppins", sans-serif;
+    background-color: #fcfdfd;
   }
 }
 
@@ -14,4 +15,13 @@
 
 html {
   scroll-behavior: auto;
+}
+
+.mask {
+  mask-image: url('../../../public/index/circle.svg');
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  background: #67478A;
+  position: absolute;
+  color: black;
 }

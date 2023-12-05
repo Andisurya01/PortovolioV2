@@ -8,7 +8,7 @@ const scaleAnimation = {
     enter: { scale: 1, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] } },
     closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] } }
 }
-const Modal = ({modal, projects}) => {
+const Modal = ({ modal, projects }) => {
     const { active, index } = modal;
     const modalContainer = useRef(null);
     const cursor = useRef(null);
@@ -38,8 +38,15 @@ const Modal = ({modal, projects}) => {
 
     return (
         <>
-            <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className="w-[500px] h-[450px] absolute bg-white overflow-hidden pointer-events-none flex items-center justify-center">
-                <div style={{ top: index * -100 + "%" }} className="h-full w-full absolute transition-[transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1)]">
+            {/* transition-[transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1)] */}
+            <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className="w-[500px] h-[450px] absolute bg-black overflow-hidden pointer-events-none flex items-center justify-center">
+                <motion.div 
+                style={{ top: index * -100 + "%" }}
+                transition={{
+                    top : 0.5,
+                    ease : [0.76, 0, 0.24, 1]
+                }}
+                className="h-full w-full absolute">
                     {
                         projects.map((project, index) => {
                             const { src, color } = project
@@ -54,7 +61,7 @@ const Modal = ({modal, projects}) => {
                             </div>
                         })
                     }
-                </div>
+                </motion.div>
             </motion.div>
             <motion.div ref={cursor} className="w-20 h-20 bg-eva02 text-white absolute rounded-full flex items-center justify-center text-sm font-light pointer-events-none" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
             <motion.div ref={cursorLabel} className="w-20 h-20 bg-transparent text-white absolute flex items-center justify-center text-sm font-light pointer-events-none" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
