@@ -21,7 +21,8 @@ const Galerry = () => {
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg bg-[url('gallery/matapink.png')] bg-center bg-auto h-80 rounded-2xl col-span-2 "></motion.div>
+                    className="w-full drop-shadow-lg bg-center bg-auto h-80 rounded-2xl col-span-2 "
+                    style={{backgroundImage : "url('/matapink.png')"}}></motion.div>
                 <motion.div
                     variants={galleryContainer}
                     initial={"init"}
