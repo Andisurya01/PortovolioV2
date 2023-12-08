@@ -16,7 +16,7 @@ const Galerry = () => {
                 <motion.div
                     variants={galleryContainer}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg bg-auto h-80 bg-[url('/gallery/matapink.png')] rounded-2xl col-span-2 overflow-hidden"
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/matapink.png')] bg-center bg-cover rounded-2xl col-span-2 overflow-hidden"
                 >
                 </motion.div>
                 <motion.div
