@@ -23,86 +23,37 @@ const Galerry = () => {
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 rounded-2xl overflow-hidden">
-                        <motion.div
-                        initial={{
-                            y: -0
-                        }}
-                    >
-                        <img
-                            src="gallery/gweh.jpg" className="" />
-                    </motion.div>
-                    </motion.div>
-                <motion.div
-                    variants={galleryContainer}
-                    initial={"init"}
-                    whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 rounded-2xl overflow-hidden ">
-                    <motion.div
-                        initial={{
-                            y: -0
-                        }}
-                    >
-                        <img
-                            src="gallery/belajarmata.png" className="" />
-                    </motion.div>
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/gallery/gweh.jpg')] bg-center bg-cover rounded-2xl overflow-hidden">
                 </motion.div>
                 <motion.div
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 rounded-2xl overflow-hidden ">
-                    <motion.div
-                        initial={{
-                            y: -0
-                        }}
-                    >
-                        <img
-                            src="gallery/maiai.png" className="" />
-                    </motion.div>
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/belajarmata.png')] bg-center bg-cover rounded-2xl overflow-hidden">
                 </motion.div>
                 <motion.div
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 rounded-2xl overflow-hidden ">
-                    <motion.div
-                        initial={{
-                            y: -0
-                        }}
-                    >
-                        <img
-                            src="gallery/belajarmuka.png" className="" />
-                    </motion.div>
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/maiai.png')] bg-center bg-cover rounded-2xl overflow-hidden ">
                 </motion.div>
                 <motion.div
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 rounded-2xl overflow-hidden ">
-                    <motion.div
-                        initial={{
-                            y: -0
-                        }}
-                    >
-                        <img
-                            src="gallery/belajartangan.png" className="" />
-                    </motion.div>
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/belajarmuka.png')] bg-center bg-cover rounded-2xl overflow-hidden ">
                 </motion.div>
                 <motion.div
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 rounded-2xl bg-white col-span-2">
-                    <motion.div
-                        initial={{
-                            y: -700,
-                            scale : 0.5
-                        }}
-                    >
-                        <img
-                            src="gallery/PNGkontenkoding.png" className="" />
-                    </motion.div>
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/belajartangan.png')] bg-center bg-cover rounded-2xl overflow-hidden">
+                </motion.div>
+                <motion.div
+                    variants={galleryContainer}
+                    initial={"init"}
+                    whileHover={"hover"}
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/PNGkontenkoding.png')] bg-center bg-cover rounded-2xl overflow-hidden col-span-2">
                 </motion.div>
             </div>
         </section>

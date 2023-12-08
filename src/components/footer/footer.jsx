@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="">
                 <div className="text-center max-w-screen-xl mx-auto px-10">
                     <h1
-                        className="md:text-9xl shadow-xl text-6xl bg-[url('index/gradienabstrack.jpg')] bg-cover bg-center text-white border-black md:py-10 py-20 md:px-96 rounded-3xl ">
+                        className="md:text-9xl shadow-xl text-6xl bg-[url('/index/gradienabstrack.jpg')] bg-cover bg-center text-white border-black md:py-10 py-20 md:px-96 rounded-3xl ">
                         ANDI SURYA PRIYADI
                     </h1>
                 </div>
