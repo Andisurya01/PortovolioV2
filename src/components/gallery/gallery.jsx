@@ -23,7 +23,7 @@ const Galerry = () => {
                     variants={galleryContainer}
                     initial={"init"}
                     whileHover={"hover"}
-                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/gallery/gweh.jpg')] bg-center bg-cover rounded-2xl overflow-hidden">
+                    className="w-full drop-shadow-lg h-80 bg-[url('/gallery/gweh.jpg')] bg-center bg-cover rounded-2xl overflow-hidden">
                 </motion.div>
                 <motion.div
                     variants={galleryContainer}

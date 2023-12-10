@@ -2,6 +2,7 @@
 import gsap from "gsap"
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import style from "./modal.module.css"
 
 const scaleAnimation = {
     initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -42,11 +43,7 @@ const Modal = ({ modal, projects }) => {
             <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className="w-[500px] h-[450px] absolute bg-black overflow-hidden pointer-events-none flex items-center justify-center">
                 <motion.div 
                 style={{ top: index * -100 + "%" }}
-                transition={{
-                    top : 0.5,
-                    ease : [0.76, 0, 0.24, 1]
-                }}
-                className="h-full w-full absolute">
+                className={style.modalSlider}>
                     {
                         projects.map((project, index) => {
                             const { src, color } = project
